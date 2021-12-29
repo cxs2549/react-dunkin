@@ -44,6 +44,7 @@
     "react-icons": "^4.3.1",
     "styled-components": "^5.3.3",
     "tailwindcss": "^3.0.8",
+    "twin.macro": "^2.8.2",
     "use-onclickoutside": "^0.4.0"
   }
 }
