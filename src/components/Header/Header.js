@@ -22,9 +22,9 @@ const Header = () => {
 		</div>
 	)
 	const Logo = () => (
-		<div className="absolute left-1/2 transform -translate-x-1/2 xl:translate-y-[70px] transition-transform duration-300">
+		<a href="/" className="fixed left-1/2 transform -translate-x-1/2 xl:top-[85px] transition-transform duration-300">
 			<img src={logo} alt="" className="w-40" />
-		</div>
+		</a>
 	)
 	return (
 		<StyledHeader>
@@ -36,10 +36,10 @@ const Header = () => {
 						<GrLocation size={32} className="relative transform -translate-y-0.5" />
 					</div>
 					<div className="hidden xl:flex items-center h-full gap-4 ml-auto text-xs">
-						<button className="font-bold h-10 border-[#D2296F] border-2 text-[#D2296F]  uppercase rounded-full  px-8 py-2 bg-white">
+						<button className="font-bold border-[#D2296F] border-2 text-[#D2296F]  uppercase rounded-full  px-8 py-2 bg-white hover:bg-[#D2296F] hover:text-white transition-all duration-200 ">
 							sign up
 						</button>
-						<button className="bg-[#D2296F] text-white font-bold h-10  uppercase rounded-full  px-8 py-2">
+						<button className="bg-[#D2296F] text-white font-bold  uppercase rounded-full  px-8 py-2 hover:bg-white hover:text-[#D2296F] transition-colors duration-200 border-2 border-[#D2296F]">
 							sign in
 						</button>
 					</div>
