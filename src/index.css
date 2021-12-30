@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.no-flow {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,12 +19,12 @@ body {
   color: hsl(0, 0%, 23%);
 }
 
-/* body,
-html {
-  position: fixed;
-} */
-
-.no-flow {
-  overflow-y: hidden;
+header {
+  @apply bg-white shadow w-full;
 }
+
+button, h1, p, li {
+  font-family: 'Fredoka One', cursive;
+}
+
 

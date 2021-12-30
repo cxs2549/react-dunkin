@@ -5,34 +5,32 @@ import { GrLocation } from 'react-icons/gr'
 import LinksLeft from './LinksLeft'
 import LinksRight from './LinksRight'
 
-const StyledHeader = styled.div.attrs({ className: 'bg-white border-b w-full' })`
+const StyledHeader = styled.header`
     svg path {
         stroke: #D2296F;
     }
-	button {
-        font-family: 'Fredoka One', cursive;
-    }
 `
 const Header = () => {
-	const Container = ({ children, height }) => (
+	const Container = ({ children, height, id }) => (
 		<div
-			className={`max-w-[1350px] mx-auto px-4 xl:px-0 flex items-center justify-between relative ${height}`}
+			id={id}
+			className={`max-w-[1350px] mx-auto px-4 xl:px-0 flex items-center justify-between relative bg-white ${height}`}
 		>
 			{children}
 		</div>
 	)
 	const Logo = () => (
-		<a href="/" className="fixed left-1/2 transform -translate-x-1/2 xl:top-[85px] transition-transform duration-300">
+		<a href="/" className="absolute left-1/2 transform -translate-x-1/2 xl:top-[87px] transition-transform duration-300">
 			<img src={logo} alt="" className="w-40" />
 		</a>
 	)
 	return (
 		<StyledHeader>
-			<div className="border-b">
+			<div id="top" className="border-b">
 				<Container height="h-[100px] xl:h-[60px]">
 					<Burger />
 					<Logo />
-					<div className="w-12 h-12 grid place-items-center xl:hidden">
+					<div className="w-12 h-12 grid place-items-center xl:hidden cursor-pointer">
 						<GrLocation size={32} className="relative transform -translate-y-0.5" />
 					</div>
 					<div className="hidden xl:flex items-center h-full gap-4 ml-auto text-xs">
@@ -45,7 +43,7 @@ const Header = () => {
 					</div>
 				</Container>
 			</div>
-			<Container height="h-[40px] xl:h-[80px]">
+			<Container id="bottom" height="h-[40px] xl:h-[80px]">
 				<LinksLeft />
 				<LinksRight />
 			</Container>

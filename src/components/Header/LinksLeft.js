@@ -34,7 +34,6 @@ return (
         <li>
             <p className="xl:hidden">dd perks</p>
             <p className="xl:block hidden">delivery</p>
-
         </li>
     </ul>
 </StyledLinksLeft>

@@ -61,6 +61,10 @@ const Burger = () => {
 		setIsOpen(!isOpen)
 		document.body.classList.toggle('no-flow')
 	}
+	const handleClose= () => {
+		setIsOpen(false)
+		document.body.classList.remove('no-flow')
+	}
 	const ref = useRef()
 	const Menu = ({ children }) => (
 		<motion.div
@@ -73,7 +77,7 @@ const Burger = () => {
 			{children}
 		</motion.div>
 	)
-	useOnClickOutside(ref, () => setIsOpen(false))
+	useOnClickOutside(ref, handleClose)
 	return (
 		<StyledBurger ref={ref}>
 			<Hamburger toggle={handleOpen} toggled={isOpen} color="#D2296F" />
