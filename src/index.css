@@ -11,3 +11,12 @@ body {
   color: hsl(0, 0%, 23%);
 }
 
+body,
+html {
+  position: fixed;
+}
+
+.no-flow {
+  overflow-y: hidden;
+}
+
