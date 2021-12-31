@@ -23,7 +23,12 @@ header {
   @apply bg-white shadow w-full;
 }
 
-button, h1, p, li {
+button, h1, li {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+}
+
+p {
   font-family: 'Fredoka One', cursive;
 }
 

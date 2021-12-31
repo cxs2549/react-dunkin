@@ -3,6 +3,8 @@ import Hamburger from 'hamburger-react'
 import { useState, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import useOnClickOutside from 'use-onclickoutside'
+import NavItem from '../ui/NavItem'
+import Button from '../ui/Button'
 
 const subMenuAnimate = {
 	enter: {
@@ -86,27 +88,22 @@ const Burger = () => {
 					<Menu>
 						<div className="bg-[#F9F5F2] p-4">
 							<div className="flex flex-col items-center justify-center">
-								<div className="flex gap-4 mb-2 text-sm">
-									<button className="font-bold border-[#D2296F] border-2 text-[#D2296F]  uppercase rounded-full  px-8 py-2 bg-white hover:bg-[#D2296F] hover:text-white transition-all duration-200 ">
-										sign up
-									</button>
-									<button className="bg-[#D2296F] text-white font-bold  uppercase rounded-full  px-8 py-2 hover:bg-white hover:text-[#D2296F] transition-colors duration-200 border-2 border-[#D2296F] ">
-										sign in
-									</button>
+								<div className="flex gap-4 mb-2">
+									<Button text="sign up" inverted />
+									<Button text="sign in" />
+									
 								</div>
 								<p className="text-xs font-medium opacity-80 mb-1">
 									Not a DD Perks member?
 								</p>
-								<span className="uppercase font-bold text-xs text-[#D2296F] hover:underline cursor-pointer">
+								<span className="uppercase font-bold text-xs text-brandPink hover:underline cursor-pointer">
 									learn more
 								</span>
 							</div>
 						</div>
 						<ul className="px-8 font-bold text-xl uppercase py-4 flex flex-col gap-6">
 							{links.map((link) => (
-								<li>
-									<a href="#"><p>{link}</p></a>
-								</li>
+								<NavItem text={link} />
 							))}
 						</ul>
 					</Menu>

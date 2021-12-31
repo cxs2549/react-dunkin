@@ -3,6 +3,7 @@ import jetBlue from '../../assets/jet-blue.png'
 import baskin from '../../assets/baskin.png'
 import nhl from '../../assets/nhl.png'
 import logo from '../../assets/logo-2.png'
+import NavItem from '../ui/NavItem'
 
 const StyledFooter = styled.footer.attrs({ className: '' })`
 h2 {
@@ -54,7 +55,7 @@ const siteLinks = [
 const Footer = () => {
 	const Container = ({ children }) => (
 		<div
-			className={`max-w-[1150px] mx-auto px-4 xl:px-0 flex flex-col items-center justify-between relative py-10 gap-16`}
+			className={`max-w-[1180px] mx-auto px-4 xl:px-0 flex flex-col items-center justify-between relative py-10 gap-16`}
 		>
 			{children}
 		</div>
@@ -67,18 +68,15 @@ const Footer = () => {
 				<div className="flex flex-col xl:flex-row items-center justify-between gap-16 w-full">
 					{/* quick links */}
 					<div className="w-full">
-						<ul className="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-16 w-10/12 mx-auto items-center font-semibold uppercase text-sm">
-							{quickLinks.map((link, index) => <li key={index}>{link}</li>)}
+						<ul className="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-16 xl:gap-x-5 w-10/12 mx-auto items-center font-semibold uppercase text-sm">
+							{quickLinks.map((link, index) => <NavItem key={index} text={link} />)}
 						</ul>
 					</div>
 					{/* follow us */}
 					<div className="w-full px-4 md:px-8 xl:px-0 md:max-w-md xl:max-w-sm">
 						<ul className="flex justify-between text-center font-semibold uppercase text-xl">
 							{followUs.map((link, index) => (
-								<li
-									key={index}
-									className=""
-								>
+								<li key={index} className="">
 									<div className="bg-[#EA2D79] cursor-pointer text-white rounded-full w-10 h-10 grid place-items-center">
 										<i className={`fa fa-${link}`} aria-hidden="true" />
 									</div>
@@ -96,7 +94,7 @@ const Footer = () => {
 				{/* site links */}
 				<div className="w-full text-[11px] xl:w-9/12 xl:mx-auto ">
 					<ul className="grid grid-cols-2 md:grid-cols-3 xl:flex xl:flex-wrap xl:justify-center gap-y-2 gap-x-6 w-10/12 xl:w-full mx-auto font-semibold uppercase">
-						{siteLinks.map((link, index) => <li key={index} className="xl:whitespace-nowrap">{link}</li>)}
+						{siteLinks.map((link, index) => <NavItem sm text={link} key={index} />)}
 					</ul>
 				</div>
 				{/* copyright */}

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import tw from 'twin.macro'
-const StyledLinksRight = styled.nav.attrs({ className: 'w-full hidden xl:block'  })`
+import NavItem from '../ui/NavItem'
+
+const StyledLinksRight = styled.nav.attrs({ className: 'w-full hidden xl:block' })`
 li {
     font-family: 'Fredoka One', cursive;
     ${tw`text-center cursor-pointer flex justify-center items-center h-10`}
@@ -20,20 +22,14 @@ li {
 }
 `
 const LinksRight = () => {
-return (
-<StyledLinksRight>
-    <ul className="grid grid-cols-3 xl:gap-3 items-center justify-between w-full max-w-lg font-bold uppercase text-sm xl:text-base mx-auto xl:ml-auto xl:mr-0">
-        <li>
-        <p>dd perks</p>
-        </li>
-        <li>
-            <p>dunkin' card</p>
-        </li>
-        <li>
-            <p>shop</p>
-        </li>
-    </ul>
-</StyledLinksRight>
-)
+	return (
+		<StyledLinksRight>
+			<ul className="grid grid-cols-3 xl:gap-3 items-center justify-between w-full max-w-lg font-bold uppercase text-sm xl:text-base mx-auto xl:ml-auto xl:mr-0">
+				<NavItem text="dd perks" />
+				<NavItem text="dunkin' card" />
+				<NavItem text="shop" />
+			</ul>
+		</StyledLinksRight>
+	)
 }
 export default LinksRight
