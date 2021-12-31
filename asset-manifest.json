@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-dunkin/static/css/main.a67ddc04.css",
+    "main.js": "/react-dunkin/static/js/main.942ad253.js",
+    "static/media/coffee.png": "/react-dunkin/static/media/coffee.5c91316d1fc870ce92ea.png",
+    "static/media/logo.jpg": "/react-dunkin/static/media/logo.0f594049e01daaaa568d.jpg",
+    "static/media/donut.png": "/react-dunkin/static/media/donut.bafd8175c065a7767714.png",
+    "static/media/find.png": "/react-dunkin/static/media/find.e93f28d7bfa9747e5a10.png",
+    "static/media/logo-2.png": "/react-dunkin/static/media/logo-2.7b372cded4f42b4520a9.png",
+    "index.html": "/react-dunkin/index.html",
+    "main.a67ddc04.css.map": "/react-dunkin/static/css/main.a67ddc04.css.map",
+    "main.942ad253.js.map": "/react-dunkin/static/js/main.942ad253.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a67ddc04.css",
+    "static/js/main.942ad253.js"
+  ]
+}
